@@ -3,7 +3,7 @@
 
 
 _Basic filtering_
-\ Find employees whose salary is less than $6,000. Return their full name and salary.
+Find employees whose salary is less than $6,000. Return their full name and salary.
 
 ```sql
 SELECT CONCAT(first_name, ' ', last_name) AS full_name, salary
