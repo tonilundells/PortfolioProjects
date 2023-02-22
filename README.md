@@ -3,13 +3,13 @@
 
 
 _Basic filtering_
--- Find employees whose salary is less than $6,000. Return their full name and salary.
+\ Find employees whose salary is less than $6,000. Return their full name and salary.
 
-'''sql
+```sql
 SELECT CONCAT(first_name, ' ', last_name) AS full_name, salary
 FROM employees
-WHERE salary < 6000 
-'''
+WHERE salary < 6000
+```
 
 <table><tr><th>full_name</th><th>salary</th></tr><tr><td>David Austin</td><td>4800.00</td></tr><tr><td>Valli Pataballa</td><td>4800.00</td></tr><tr><td>Diana Lorentz</td><td>4200.00</td></tr><tr><td>Alexander Khoo</td><td>3100.00</td></tr><tr><td>Shelli Baida</td><td>2900.00</td></tr><tr><td>Sigal Tobias</td><td>2800.00</td></tr><tr><td>Guy Himuro</td><td>2600.00</td></tr><tr><td>Karen Colmenares</td><td>2500.00</td></tr><tr><td>Irene Mikkilineni</td><td>2700.00</td></tr><tr><td>Sarah Bell</td><td>4000.00</td></tr><tr><td>Britney Everett</td><td>3900.00</td></tr><tr><td>Jennifer Whalen</td><td>4400.00</td></tr></table>
 
