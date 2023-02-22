@@ -5,17 +5,25 @@
 _Basic filtering_
 -- Find employees whose salary is less than $6,000. Return their full name and salary.
 
+'''sql
 SELECT CONCAT(first_name, ' ', last_name) AS full_name, salary
 FROM employees
 WHERE salary < 6000 
+'''
 
+<table><tr><th>full_name</th><th>salary</th></tr><tr><td>David Austin</td><td>4800.00</td></tr><tr><td>Valli Pataballa</td><td>4800.00</td></tr><tr><td>Diana Lorentz</td><td>4200.00</td></tr><tr><td>Alexander Khoo</td><td>3100.00</td></tr><tr><td>Shelli Baida</td><td>2900.00</td></tr><tr><td>Sigal Tobias</td><td>2800.00</td></tr><tr><td>Guy Himuro</td><td>2600.00</td></tr><tr><td>Karen Colmenares</td><td>2500.00</td></tr><tr><td>Irene Mikkilineni</td><td>2700.00</td></tr><tr><td>Sarah Bell</td><td>4000.00</td></tr><tr><td>Britney Everett</td><td>3900.00</td></tr><tr><td>Jennifer Whalen</td><td>4400.00</td></tr></table>
 
 -- Find employees who were hired after 1997-09-01. Return their full name and hire date.
 -- Using CONCAT will combine strings in the first name column, a space, and last name column.
 
+'''sql
 SELECT CONCAT(first_name, ' ', last_name) AS full_name, hire_date 
 FROM employees
 WHERE hire_date > '1997-09-01'
+'''
+
+<table><tr><th>full_name</th><th>hire_date</th></tr><tr><td>Valli Pataballa</td><td>1998-02-05</td></tr><tr><td>Diana Lorentz</td><td>1999-02-07</td></tr><tr><td>John Chen</td><td>1997-09-28</td></tr><tr><td>Ismael Sciarra</td><td>1997-09-30</td></tr><tr><td>Jose Manuel Urman</td><td>1998-03-07</td></tr><tr><td>Luis Popp</td><td>1999-12-07</td></tr><tr><td>Shelli Baida</td><td>1997-12-24</td></tr><tr><td>Guy Himuro</td><td>1998-11-15</td></tr><tr><td>Karen Colmenares</td><td>1999-08-10</td></tr><tr><td>Shanta Vollman</td><td>1997-10-10</td></tr><tr><td>Irene Mikkilineni</td><td>1998-09-28</td></tr><tr><td>Jonathon Taylor</td><td>1998-03-24</td></tr><tr><td>Jack Livingston</td><td>1998-04-23</td></tr><tr><td>Kimberely Grant</td><td>1999-05-24</td></tr><tr><td>Charles Johnson</td><td>2000-01-04</td></tr></table>
+
 
 _Alternating tables_
 -- Create a new column in 'employees' for full name
