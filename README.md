@@ -1,5 +1,13 @@
 # Human Resources Data Analysis
-## Skills used: Joins, Update, Minus, Temp Tables, Subqueries, Grouping, CTE's
+## Skills Used: `Joins`, `Update`, `Minus`, `Temp Tables`, `Subqueries`, `Grouping`, `CTE's`
+
+### <span style="font-size: 14px;"><b>Project Overview</b></span>
+
+<span style="font-size: 14px;">Using a&nbsp;</span> [sample SQL database](https://www.sqltutorial.org/sql-sample-database/) <span style="font-size: 14px;">&nbsp;that manages HR data of a small buisness.
+
+### **Database Structure**
+
+![Image of database structure](https://www.sqltutorial.org/wp-content/uploads/2016/04/SQL-Sample-Database-Schema.png))
 
 
 ### _Basic filtering_
