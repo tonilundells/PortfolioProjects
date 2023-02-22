@@ -1,14 +1,15 @@
-/*
-Human Resources Data Analysis
-Skills used: Joins, Update, Minus, Temp Tables, Subqueries, Grouping, CTE's
-*/
 
--- Basic filtering
+# Human Resources Data Analysis
+## Skills used: Joins, Update, Minus, Temp Tables, Subqueries, Grouping, CTE's
+
+
+_Basic filtering_
 -- Find employees whose salary is less than $6,000. Return their full name and salary.
 
 SELECT CONCAT(first_name, ' ', last_name) AS full_name, salary
 FROM employees
-WHERE salary < 6000
+WHERE salary < 6000 
+
 
 -- Find employees who were hired after 1997-09-01. Return their full name and hire date.
 -- Using CONCAT will combine strings in the first name column, a space, and last name column.
@@ -17,7 +18,7 @@ SELECT CONCAT(first_name, ' ', last_name) AS full_name, hire_date
 FROM employees
 WHERE hire_date > '1997-09-01'
 
--- Alternating tables
+_Alternating tables_
 -- Create a new column in 'employees' for full name
 
 ALTER TABLE employees
@@ -30,7 +31,7 @@ SET full_name = CONCAT(employees.first_name, ' ', employees.last_name)
 SELECT TOP (3) employee_id, first_name, last_name, full_name
 FROM employees
 
--- Filtering and joining
+_Filtering and joining_
 -- Job titles are within the Finance department?
 
 --METHOD 1, simple queries
@@ -69,7 +70,7 @@ WHERE employees.first_name NOT LIKE 'D%' AND --Find values that start with D or 
         employees.last_name NOT LIKE 'D%' AND
         employees.last_name NOT LIKE 'S%'
 
--- Grouping
+_Grouping_
 -- Which location has the most employees?
 -- Which is the biggest department?
 
@@ -96,7 +97,7 @@ GROUP BY E.department_id, D.department_name
 ORDER BY manager_count DESC
 
 
--- Temporary tables
+_Temporary tables_
 -- What are the new salaries of all employees, based on their titles?
 
 DROP TABLE IF EXISTS #raises                             
@@ -113,7 +114,7 @@ FROM employees E
 JOIN #raises R ON E.job_id = R.job_id
 
 
--- CTE
+_CTE_
 -- Which employees do not have dependents?
  
 WITH dependentless AS (
