@@ -1,4 +1,4 @@
-# Human Resources Data Analysis
+# SQL Data Querying/ Human Resources
 ## Skills Used: `Joins`, `Update`, `Minus`, `Temp Tables`, `Subqueries`, `Grouping`, `CTE's`
 
 ### <span style="font-size: 14px;"><b>Project Overview</b></span>
