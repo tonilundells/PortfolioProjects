@@ -1,6 +1,8 @@
 
 # Covid 19 Data Exploration 
-## Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+## Skills used: `Joins`, `CTE's`, `Temp Tables, `Windows Functions`, `Aggregate Functions`, `Creating Views`, `Converting Data Types`
+
+### <span style="font-size: 14px;"><b>Project Overview</b></span>
 
 ```sql
 Select *
@@ -18,7 +20,8 @@ Where continent is not null
 order by 1,2
 ```
 ### _Total Cases vs Total Deaths_
--- Shows likelihood of dying if you contract covid in your country
+
+_Shows likelihood of dying if you contract covid in your country_
 
 ```sql
 Select Location, date, total_cases,total_deaths, (total_deaths/total_cases)*100 as DeathPercentage
@@ -29,7 +32,8 @@ order by 1,2
 ```
 
 ### _Total Cases vs Population_
--- Shows what percentage of population infected with Covid
+
+_Shows what percentage of population infected with Covid_
 
 ```sql
 Select Location, date, Population, total_cases,  (total_cases/population)*100 as PercentPopulationInfected
@@ -58,8 +62,7 @@ Group by Location
 order by TotalDeathCount desc
 ```
 
-
-###BREAKING THINGS DOWN BY CONTINENT
+### BREAKING THINGS DOWN BY CONTINENT
 
 ### _Showing contintents with the highest death count per population_
 
@@ -72,7 +75,7 @@ Group by continent
 order by TotalDeathCount desc
 ```
 
-###GLOBAL NUMBERS
+### _GLOBAL NUMBERS_
 
 ```sql
 Select SUM(new_cases) as total_cases, SUM(cast(new_deaths as int)) as total_deaths, SUM(cast(new_deaths as int))/SUM(New_Cases)*100 as DeathPercentage
@@ -84,7 +87,8 @@ order by 1,2
 ```
 
 ### _Total Population vs Vaccinations_
--- Shows Percentage of Population that has recieved at least one Covid Vaccine
+
+_Shows Percentage of Population that has recieved at least one Covid Vaccine_
 
 ```sql
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
@@ -97,6 +101,7 @@ Join PortfolioProject..CovidVaccinations vac
 where dea.continent is not null 
 order by 2,3
 ```
+
 ### _Using CTE to perform Calculation on Partition By in previous query_
 
 ```sql
@@ -131,7 +136,6 @@ Population numeric,
 New_vaccinations numeric,
 RollingPeopleVaccinated numeric
 )
-
 Insert into #PercentPopulationVaccinated
 Select dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations
 , SUM(CONVERT(int,vac.new_vaccinations)) OVER (Partition by dea.Location Order by dea.location, dea.Date) as RollingPeopleVaccinated
@@ -142,8 +146,6 @@ Join PortfolioProject..CovidVaccinations vac
 	and dea.date = vac.date
 --where dea.continent is not null 
 --order by 2,3
-
-```sql
 Select *, (RollingPeopleVaccinated/Population)*100
 From #PercentPopulationVaccinated
 ```
