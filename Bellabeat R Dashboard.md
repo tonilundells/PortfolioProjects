@@ -1,20 +1,8 @@
----
-title: "Bellabeat case study"
-output:
-  html_document:
-    toc: TRUE
-    toc_depth: 4
-    toc_float: TRUE
-    number_sections: TRUE
-    df_print: paged
----
 
 
 # Introduction
 
 I will be walking you through my R code of the Bellabeat case study project I completed as part of the Google Data Analytics Professional Certificate. This tutorial would be used to walk my team of analysts at Bellabeat through my steps and thought processes while deriving insights from this data set. For this reason, it will be more detailed on the analysis and coding side, and less about the high-level insights that I presented in my [mock presentation to senior executives](https://sites.google.com/view/alondra-perez-cortez/projects/bellabeat-case-study?authuser=0). I will include project overview in the form of a statement of the business task, data overview, data clean up documentation, summary of data analysis, and a summary of insights that would be presented to senior executives.
-
-If you have any questions, please feel free to email me at apcalondraperezcortez (at) gmail.com or via [LinkedIn](https://www.linkedin.com/in/alondra-perez-cortez/). If you want to check out more of my work, visit my [portfolio](https://sites.google.com/view/alondra-perez-cortez/projects?authuser=0).
 
 ## Project Overview - Business Task
 
