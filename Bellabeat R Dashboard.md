@@ -9,17 +9,6 @@ output:
     df_print: paged
 ---
 
-```{css, echo=FALSE, class.output="scroll-100"}
-pre {
-  max-height: 300px;
-  overflow-y: auto;
-}
-
-pre[class] {
-  max-height: 300px;
-}
-```
-
 
 # Introduction
 
