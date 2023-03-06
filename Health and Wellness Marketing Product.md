@@ -214,16 +214,6 @@ FROM (SELECT id, time_new, calories, total_intensity, average_intensity, step_to
 	  HAVING Count(*) > 1) AS temp;
 ``` 
 
-Interpretations:
-
-* The shapes of the curves are more variant across activity levels
-* Within quartiles 2 and 3, the shape of the curves are the same, but shifted over for "time in bed"
-* Quartiles 1 and 4 show different shapes for "time asleep" and "time in bed".
-  + Because quartile 1 "time asleep" density peak is higher than "time in bed" density peak, it indicates that there were more data points surrounding the mean of "time asleep".
-  + Similarly, there were more data points surrounding the "time in bed" peak of quartile 4, resulting in a higher peak than the "time asleep" peak.
-* Quartile 4 had the highest sleep delay ratio at almost an hour. Followed by quartile 1, 2, and 3, respectively.
-  + Quartile 4 showed the worst sleep quality. This is consistent with the negative relationship between sleep and activity in the previous segment of "sleep trends". 
-  + The order of sleep quality is also consistent with the weak nature of the aforementioned relationship.
 
 ## Analysis Summary
 
